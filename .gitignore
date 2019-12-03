@@ -106,3 +106,8 @@ venv.bak/
 data/LLD-icon.hdf5
 .DS_Store
 
+# Sample images
+*.png
+
+# Saved model checkpoints
+*.h5

@@ -8,6 +8,6 @@ def load():
     Returns:
         numpy.array: an array of shape (486377, 3, 32, 32)
     """
-    hdf5_file = h5py.File('data/LLD-icon.hdf5', 'r')
+    hdf5_file = h5py.File('../data/LLD-icon.hdf5', 'r')
     images = hdf5_file['data'][:]
     return images
