@@ -1,5 +1,5 @@
 import h5py
-
+import numpy as np
 
 def load():
     """
@@ -9,5 +9,5 @@ def load():
         numpy.array: an array of shape (486377, 3, 32, 32)
     """
     hdf5_file = h5py.File('data/LLD-icon.hdf5', 'r')
-    images = hdf5_file['data'][:]
+    images = np.array(hdf5_file['data'][:]).transpose((0, 2, 3, 1))
     return images
